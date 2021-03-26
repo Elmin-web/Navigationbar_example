@@ -26,7 +26,7 @@ function js() {
 }
 
 function css() {
-	return src(["src/sass/reset.scss", "src/sass/*", "!src/sass/reset.scss"])
+	return src(["src/sass/*"])
 		.pipe($.sourcemaps.init({ loadMaps: true }))
 		.pipe($.concat("style.css"))
 		.pipe($.sass().on("error", console.log))
